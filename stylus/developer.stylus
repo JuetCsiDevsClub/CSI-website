@@ -1,0 +1,106 @@
+mainColor = #F0544F
+secondaryColor = #000
+
+body, html
+  overflow: hidden
+  margin: 0
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif
+
+.f
+  position: fixed
+  top: 5px
+  right: 10px
+  font-family: 'Arial'
+  font-size: 0.8em
+  color: mainColor
+  
+  a
+    color: secondaryColor
+
+center()
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+_circle(size)
+  width size
+  height size
+  border-radius size
+
+projectSize = 20px;
+
+.Developer
+  center()
+  width projectSize
+  height projectSize
+  cursor pointer
+  
+.Developer:hover
+  .imgMasked
+    clip-path circle(projectSize*5 at center)
+      
+  .Developer-hail
+    _circle(projectSize*10)
+      
+  .dev
+    _circle(projectSize*10)
+    border projectSize*4 solid #FFF4E6
+    opacity 0
+    
+  .Developer-name
+    left 200%
+    opacity 1
+    
+    &:before
+      width 100%
+
+  
+
+.Developer-hail
+  center()
+  background-color mainColor
+  _circle(projectSize*2)
+  transition: 0.5s
+  opacity 0.2
+  
+.dev
+  center()
+  _circle(0)
+  transition: 0.7s
+  border projectSize+2px solid mainColor
+  border-radius projectSize
+  pointer-events: none;
+
+
+.imgMasked
+  center()
+  top: 50%;
+  height: projectSize * 10;
+  clip-path: circle(projectSize at center);
+  transition: 0.5s;
+  pointer-events: none;
+
+.Developer-name
+  position absolute
+  max-width: 600px;
+  min-width 150px;
+  left: 0;
+  top: 150%;
+  pointer-events: none;
+  transition: 0.5s;
+  color secondaryColor
+  padding 3px 6px
+  z-index 2
+  opacity 0
+  
+  &:before
+      content ''
+      width 0
+      height 100%
+      background-color mainColor
+      position absolute
+      top 0
+      left 0
+      transition 0.3s
+      z-index -1
