@@ -2216,7 +2216,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 #clients {
   background-color: #e9eaea;
-  padding: 4.8rem 0 4.8rem;
+  padding: 80px 0;
 }
 #clients h3{
   color: rgba(0, 0, 0, 0.5);
@@ -2224,13 +2224,13 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 #clients img{
   width: 14rem;
   height: 14rem;
-  margin: 0 auto 1.2rem auto;
-  display: block;
   border-radius: 50%;
-  vertical-align: middle;
+  object-fit: cover;
+  overflow: hidden;
+  display: block;
 }
 #clients .faculty {
-  padding: 0 10px;
+  padding: 30px 0;
 }
 #separation {
   display: inline-block;
@@ -2243,7 +2243,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding-bottom: 20px;
 }
 #clients .author-info {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   text-align: center;
   font-family: "librebaskerville-bold", sans-serif;
